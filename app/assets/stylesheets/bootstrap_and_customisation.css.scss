@@ -1,6 +1,15 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
 $body-bg: #ecf0f1;
-$navbar-inverse-bg: #27ae60;
-$navbar-inverse-link-color: #fff;
-$brand-primary: #f39c12;
-$jumbotron-bg: #bdc3c7;
+$navbar-default-bg: white;
+$navbar-default-link-color: #2980b9;
+$navbar-height: 45px;
+$brand-primary: #2980b9;
+$jumbotron-bg: white;
+$font-family-sans-serif: 'Open Sans';
+
+.center{
+	text-align: center;
+}
+
 @import 'bootstrap'
