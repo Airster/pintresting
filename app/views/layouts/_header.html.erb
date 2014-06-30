@@ -1,4 +1,5 @@
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-<% if user_signed_in? %>default<% else %>inverse<% end %>" role="navigation">
+<!-- Show default navbar (white) if signed in but inverse (black) navbar if not -->
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -19,7 +20,17 @@
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "About", about_path %></li>
         <li><%= link_to "Contact", contact_path %></li>
+        <li>
+          <% if user_signed_in? %>
 
+            <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+
+          <% else %>
+
+            <%= link_to "Log in", new_user_session_path %>
+
+          <% end %>
+        </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
